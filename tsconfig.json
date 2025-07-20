@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+      "target": "ES2024",
+      "module": "CommonJS",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "moduleResolution":"node",
+      "sourceMap": true,
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true
+  },
+  "include": [
+      "**/*.ts"
+  ],
+  "exclude": []
+}

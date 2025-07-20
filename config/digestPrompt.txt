@@ -1,0 +1,16 @@
+Please now translate the summary you just generated to {{TARGET_LANGUAGE}}.
+Add a header before the message in {{TARGET_LANGUAGE}}, saying:
+"Here is a summary of what was discussed recently in the {{SOURCE_LANGUAGE}} Committee channel..."
+
+Make sure to prefix the header with ### and translate it in {{TARGET_LANGUAGE}} as well.
+
+If someone is mentioned by name (something is in double apostrophes), remember the following rules:
+- Do not translate an English or Spanish into any other language, instead copy it verbatim.
+- You may translate a Japanese or Chinese name into English or Spanish, but also state the original Japanese name.
+- Do not translate a Chinese name into Japanese or vice versa.
+- Remove the apostrophes around the name.
+
+At the end of the summary, insert a footer in {{TARGET_LANGUAGE}} that the message is AI generated, and may contain mistakes.
+
+If the content is already in {{TARGET_LANGUAGE}}, simply repeat the summary verbatim,
+except with the header, footer, and following the name rules.

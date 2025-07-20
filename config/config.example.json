@@ -1,0 +1,21 @@
+{
+  "contextDays": 14,
+  "reportDays": 3,
+  "regions": [{
+    "language": "English",
+    "channelId": "",
+    "digestChannelId": ""
+  }, {
+    "language": "Japanese",
+    "channelId": "",
+    "digestChannelId": ""
+  }, {
+    "language": "Chinese",
+    "channelId": "",
+    "digestChannelId": ""
+  }, {
+    "language": "Spanish",
+    "channelId": "",
+    "digestChannelId": ""
+  }]
+}

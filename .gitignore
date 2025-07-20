@@ -1,0 +1,4 @@
+/config/config.json
+/.parcel-cache
+/build
+/node_modules

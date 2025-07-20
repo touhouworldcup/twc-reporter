@@ -1,0 +1,32 @@
+{
+  "name": "twc-reporter",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "parcel build && node ."
+  },
+  "targets": {
+    "server": {
+      "source": "src/index.ts",
+      "distDir": "build",
+      "context": "node",
+      "outputFormat": "commonjs",
+      "scopeHoist": true,
+      "optimize": true,
+      "engines": {
+        "node": "= 22"
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.15",
+    "parcel": "^2.15.4",
+    "ts-standard": "^12.0.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@google/genai": "^1.9.0",
+    "discord.js": "^14.21.0",
+    "limiter": "^3.0.0"
+  }
+}
