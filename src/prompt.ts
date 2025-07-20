@@ -1,4 +1,4 @@
-import { Content, GenerateContentResponse } from '@google/genai'
+import { Content, GenerateContentConfig, GenerateContentResponse } from '@google/genai'
 import { ai, systemPrompt } from './globals'
 import { RateLimiter } from 'limiter'
 
@@ -20,10 +20,17 @@ export async function prompt (...messages: Array<[string, string]>): Promise<str
 async function prompt0 (...messages: Array<[string, string]>): Promise<string> {
   await limiter.removeTokens(1)
   const model = 'gemini-2.5-pro'
-  const config = {
+  const config: GenerateContentConfig = {
     responseMimeType: 'text/plain',
     systemInstruction: [{
       text: systemPrompt
+    }],
+    thinkingConfig: {
+      thinkingBudget: 32768
+    },
+    tools: [{
+      googleSearch: {},
+      urlContext: {}
     }]
   }
   const contents: Content[] = messages.map(message => {

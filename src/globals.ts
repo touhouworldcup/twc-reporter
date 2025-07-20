@@ -31,6 +31,7 @@ export interface Region {
 export interface Config {
   discordToken: string
   geminiApiKey: string
+  sendMessages: boolean
   contextDays: number
   reportDays: number
   regions: Region[]

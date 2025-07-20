@@ -1,4 +1,5 @@
 {
+  "sendMessages": true,
   "contextDays": 14,
   "reportDays": 3,
   "regions": [{

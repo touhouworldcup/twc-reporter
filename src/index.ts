@@ -58,8 +58,13 @@ async function createChannelDigest (summary: ChannelSummary, targetRegion: Regio
 
 async function sendChannelDigest (digest: ChannelDigest): Promise<void> {
   console.log('Sending channel digest of', digest.sourceRegion.language, 'to', digest.targetRegion.language)
-  const channel = await client.channels.fetch(digest.targetRegion.digestChannelId) as TextChannel
   const text = digest.digestText
+  if (!config.sendMessages) {
+    console.log(`${digest.targetRegion.language} > ${text}`)
+    return
+  }
+
+  const channel = await client.channels.fetch(digest.targetRegion.digestChannelId) as TextChannel
   await channel.send(text.slice(0, 2000))
   if (text.length < 2000) return
 
